@@ -1,0 +1,31 @@
+name: pomo
+version: "0.1.0"
+author: Jeffrey Walraven <jeffrey@ravenswall.net>
+about: A minimalist pomodoro cli utility.
+args:
+    - time:
+        short: t
+        long: time
+        value_name: NUMBER
+        help: The duration of the pomodoro (in minutes)
+        takes_value: true
+    - break:
+        short: b
+        long: break
+        value_name: NUMBER
+        help: The duration of the break (in minutes)
+        takes_value: true
+    - number:
+        short: n
+        long: number
+        value_name: NUMBER
+        help: The number of pomodoros to perform until a long break
+        takes_value: true
+    - loop:
+        short: l
+        long: loop
+        help: Sets the pomodoro cycle to loop indefinitely
+    - verbose:
+        short: v
+        long: verbose
+        help: Sets the level of verbosity
