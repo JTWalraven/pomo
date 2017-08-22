@@ -1,0 +1,6 @@
+[package]
+name = "pomo"
+version = "0.1.0"
+authors = ["Jeffrey Walraven <jeffrey@ravenswall.net>"]
+
+[dependencies]
