@@ -15,6 +15,12 @@ args:
         value_name: NUMBER
         help: The duration of the break (in minutes)
         takes_value: true
+    - units:
+        short: u
+        long: units
+        value_name: TYPE
+        help: The units used in counting (ms, s, Default = m, h)
+        takes_value: true
     - number:
         short: n
         long: number
@@ -22,6 +28,7 @@ args:
         help: The number of pomodoros to perform until a long break
         takes_value: true
     - format:
+        short: f
         long: format
         value_name: FORMAT
         help: The string format definition for the progress bar output
@@ -31,6 +38,12 @@ args:
         long: message
         value_name: MESSAGE
         help: The message that is output upon completion
+        takes_value: true
+    - execute:
+        short: x
+        long: execute
+        value_name: COMMAND
+        help: The command to execute upon completion
         takes_value: true
     - loop:
         short: l
