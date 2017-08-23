@@ -37,7 +37,12 @@ args:
         short: m
         long: message
         value_name: MESSAGE
-        help: The message that is output upon completion
+        help: The message that is output upon pomodoro completion
+        takes_value: true
+    - break-message:
+        long: break-message
+        value_name: MESSAGE
+        help: The message that is output upon break completion
         takes_value: true
     - execute:
         short: x
@@ -45,11 +50,11 @@ args:
         value_name: COMMAND
         help: The command to execute upon completion
         takes_value: true
+    - color:
+        short: c
+        long: color
+        help: Turns on colored output
     - loop:
         short: l
         long: loop
         help: Sets the pomodoro cycle to loop indefinitely
-    - verbose:
-        short: v
-        long: verbose
-        help: Sets the level of verbosity
