@@ -7,3 +7,4 @@ authors = ["Jeffrey Walraven <jeffrey@ravenswall.net>"]
 clap = { version = "~2.26.0", features = ["yaml"] }
 pbr = "~1.0.0"
 term = "0.4.6"
+shlex = "0.1.1"

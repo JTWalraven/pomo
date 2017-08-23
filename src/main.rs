@@ -2,6 +2,7 @@
 extern crate clap;
 extern crate pbr;
 extern crate term;
+extern crate shlex;
 use clap::App;
 use pbr::ProgressBar;
 use std::{thread, time};
@@ -57,8 +58,8 @@ fn get_time_scale_for_units(units: &str) -> u64 {
 
 fn run_execute(execute: &str) {
     if execute.len() > 0 {
-        let mut execute_args: Vec<&str> = execute.split_whitespace().collect();
-        let execute_command: &str = execute_args.remove(0);
+        let mut execute_args: Vec<String> = shlex::split(execute).unwrap_or(Vec::new());
+        let execute_command: String = execute_args.remove(0);
         let _ = Command::new(execute_command)
             .args(execute_args)
             .spawn()
