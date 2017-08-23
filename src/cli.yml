@@ -21,6 +21,17 @@ args:
         value_name: NUMBER
         help: The number of pomodoros to perform until a long break
         takes_value: true
+    - format:
+        long: format
+        value_name: FORMAT
+        help: The string format definition for the progress bar output
+        takes_value: true
+    - message:
+        short: m
+        long: message
+        value_name: MESSAGE
+        help: The message that is output upon completion
+        takes_value: true
     - loop:
         short: l
         long: loop
